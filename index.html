@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="overley"></div>
+            <img src="img/mobile.png" class="mobile" alt="">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="img/camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="img/processor.png" alt="">
+                    <div>
+                        <h1>Prossesor</h1>
+                        <p>Snapdragon 888 octa-core</p>
+                    </div></div>
+                <div class="feature three">
+                    <img src="img/display.png" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>Flued Amoled</p>
+                    </div></div>
+                <div class="feature four">
+                    <img src="img/battery.png" alt="">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000mAh 10Hour + SOT </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="img/arrow.png" id="up" alt="">
+            <h3>Feature</h3>
+            <img src="img/arrow.png" id="down" alt="">
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle")
+        var up = document.getElementById("up")
+        var down = document.getElementById("down")
+
+
+        var rotate = circle.style.transform;
+        var rotateSum;
+
+        up.onclick = function(){
+            rotateSum = rotate + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotate = rotateSum;
+        }
+        down.onclick = function(){
+            rotateSum = rotate + "rotate(+90deg)";
+            circle.style.transform = rotateSum;
+            rotate = rotateSum;
+        }
+        
+    </script>
+</body>
+</html>
